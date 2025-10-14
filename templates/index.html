@@ -1,13 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>{{ title }}</title>
-    <link rel="stylesheet" href="/static/css/style.css">
-    <script src="/static/js/script.js" defer></script>
+    <title>CZR Barbour Evolution</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <h1>Welcome to CZR Barbour Evolution</h1>
-    <p>Art. Intelligence. Global Collection Management.</p>
+    <header>
+        <h1>Welcome to CZR Barbour Evolution</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/services">Services</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Art. Intelligence. Global Collection Management.</h2>
+        <p>We provide professional art advisory, valuation, and collection management worldwide.</p>
+    </main>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
