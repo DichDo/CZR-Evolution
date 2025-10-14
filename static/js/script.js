@@ -1,1 +1,3 @@
-console.log("CZR Barbour Evolution active");
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('CZR Barbour Evolution loaded');
+});
