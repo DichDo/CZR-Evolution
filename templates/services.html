@@ -1,29 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services - CZR Barbour Evolution</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-<body>
-  <header>
-    <div class="logo">CZR Barbour Evolution</div>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-      <a href="/services">Services</a>
-      <a href="/contact">Contact</a>
-    </nav>
-  </header>
+{% extends "base.html" %}
+{% block content %}
+<h1>What We Do</h1>
+<ul>
+    <li>Collection management (buying & selling)</li>
+    <li>Current market trends and insight</li>
+    <li>Valuation (sale, insurance, tax)</li>
+    <li>Inventory management (physical tracking)</li>
+    <li>Condition reporting</li>
+    <li>Restoration and conservation</li>
+    <li>Fine art insurance and shipping</li>
+    <li>Collection security and lighting</li>
+    <li>Fine art storage and installation</li>
+</ul>
 
-  <section class="hero">
-    <h1>Our Services</h1>
-    <p>We provide art intelligence analytics, collection management, and strategic curation solutions worldwide.</p>
-  </section>
-
-  <footer>
-    <p>© 2025 CZR Barbour Evolution. All rights reserved.</p>
-  </footer>
-</body>
-</html>
+<h2>Benefits to Clients</h2>
+<ul>
+    <li>Advanced collection development</li>
+    <li>Asset-backed lending</li>
+    <li>Succession planning</li>
+    <li>Independent professional advice</li>
+</ul>
+{% endblock %}
