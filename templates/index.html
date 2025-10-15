@@ -1,29 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CZR Barbour Evolution</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <meta charset="UTF-8">
+    <title>{{ title }} - CZR Barbour Evolution</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-  <header>
-    <div class="logo">CZR Barbour Evolution</div>
     <nav>
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-      <a href="/services">Services</a>
-      <a href="/contact">Contact</a>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/services">Services</a></li>
+        </ul>
     </nav>
-  </header>
-  
-  <section class="hero">
-    <h1>Art. Intelligence. Global Collection Management.</h1>
-    <p>Where creativity meets precision. Building the next generation of art intelligence systems.</p>
-  </section>
 
-  <footer>
-    <p>© 2025 CZR Barbour Evolution. All rights reserved.</p>
-  </footer>
-</body>
-</html>
+    <section>
+        {% extends "base.html" %}
+{% block content %}
+<h1>Welcome to CZR Barbour Evolution</h1>
+<p>Art. Intelligence. Global Collection Management.</p>
+{% endblock %}
+
