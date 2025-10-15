@@ -33,3 +33,23 @@ main {
     text-align: center;
     padding: 50px;
 }
+
+h1, h2 {
+    color: #111;
+}
+
+form input, form textarea {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #111;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #333;
+}
