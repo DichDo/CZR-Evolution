@@ -1,36 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - CZR Barbour Evolution</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-<body>
-  <header>
-    <div class="logo">CZR Barbour Evolution</div>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-      <a href="/services">Services</a>
-      <a href="/contact">Contact</a>
-    </nav>
-  </header>
+{% extends "base.html" %}
+{% block content %}
+<h1>Contact CZR Barbour Evolution</h1>
 
-  <section class="hero">
-    <h1>Contact Us</h1>
-    <p>Reach out for collaborations, inquiries, or more information about our services.</p>
+<p>Reach out to our global team of art and intelligence professionals for partnerships, consultations, or collection management support.</p>
 
-    <form action="/contact" method="post" class="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+<form action="/contact" method="post" style="max-width: 500px; margin: auto; text-align: left;">
+    <label for="name">Full Name:</label><br>
+    <input type="text" id="name" name="name" required style="width:100%; padding:8px; margin-bottom:10px;"><br>
 
-  <footer>
-    <p>© 2025 CZR Barbour Evolution. All rights reserved.</p>
-  </footer>
-</body>
-</html>
+    <label for="email">Email Address:</label><br>
+    <input type="email" id="email" name="email" required style="width:100%; padding:8px; margin-bottom:10px;"><br>
+
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="5" required style="width:100%; padding:8px; margin-bottom:10px;"></textarea><br>
+
+    <button type="submit" style="padding:10px 20px; background:#111; color:#fff; border:none; cursor:pointer;">Send</button>
+</form>
+
+<p style="margin-top: 20px;">Email: contact@czrbarbourevolution.org<br>
+Phone: +1 (800) 234-5678<br>
+Location: Global Network Office</p>
+{% endblock %}
