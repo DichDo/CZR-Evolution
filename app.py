@@ -2,13 +2,9 @@ from flask import Flask, render_template
 from dotenv import load_dotenv
 import os
 
-# Load environment variables
 load_dotenv()
 
 app = Flask(__name__)
-
-# Flask secret key for sessions
-app.secret_key = os.getenv("SECRET_KEY", "fallbacksecret")
 
 @app.route('/')
 def home():
@@ -27,4 +23,5 @@ def contact():
     return render_template('contact.html', title='Contact')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
